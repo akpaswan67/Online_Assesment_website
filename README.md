@@ -7,7 +7,7 @@ JWT_SECRET=your-jwt-secret
 
 JWT_REFRESH_SECRET=your-jwt-refresh-secret
 
-PORT=3000
+PORT=8000
 
 EMAIL_USER=your-email
 
