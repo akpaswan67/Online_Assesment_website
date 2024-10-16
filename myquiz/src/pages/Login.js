@@ -88,7 +88,7 @@ const Login = ({ setAuth, setRole }) => {
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:3000/api/auth/login', { email, password, role });
+      const res = await axios.post('https://quiz-application-with-admin-f-1.onrender.com/api/auth/login', { email, password, role });
       localStorage.setItem('token', res.data.token);
       setAuth(true);
       setRole(role); 

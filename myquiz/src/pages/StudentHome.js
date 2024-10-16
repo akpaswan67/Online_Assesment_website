@@ -20,7 +20,7 @@ const StudentHome = () => {
           return;
         }
 
-        const response = await axios.get('http://localhost:3000/api/tests', {
+        const response = await axios.get('https://quiz-application-with-admin-f-1.onrender.com/api/tests', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

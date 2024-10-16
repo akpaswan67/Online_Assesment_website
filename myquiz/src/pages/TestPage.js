@@ -20,7 +20,7 @@ const TestPage = () => {
   useEffect(() => {
     const fetchTest = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/tests/${id}`, {
+        const response = await axios.get(`https://quiz-application-with-admin-f-1.onrender.com/api/tests/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

@@ -72,7 +72,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/api/auth/register', { email, password, name, role });
+      const res = await axios.post('https://quiz-application-with-admin-f-1.onrender.com/api/auth/register', { email, password, name, role });
       console.log('User registered:', res.data);
       toast.success('Registration successful!', {
         position: "top-center",

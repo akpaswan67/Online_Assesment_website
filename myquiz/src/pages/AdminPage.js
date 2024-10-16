@@ -22,7 +22,7 @@ const AdminPage = () => {
       }
 
       try {
-        const response = await axios.get('http://localhost:3000/api/auth/me', {
+        const response = await axios.get('https://quiz-application-with-admin-f-1.onrender.com/api/auth/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const userData = response.data;
@@ -50,7 +50,7 @@ const AdminPage = () => {
     }
 
     try {
-      const response = await axios.get('http://localhost:3000/api/tests', {
+      const response = await axios.get('https://quiz-application-with-admin-f-1.onrender.com/api/tests', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTests(response.data);
@@ -132,7 +132,7 @@ const AdminPage = () => {
     };
 
     try {
-      await axios.post('http://localhost:3000/api/tests/create', testData, {
+      await axios.post('https://quiz-application-with-admin-f-1.onrender.com/api/tests/create', testData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success('Test created successfully!', { position: 'top-center', autoClose: 2000 });
@@ -161,7 +161,7 @@ const AdminPage = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:3000/api/tests/${testId}`, {
+      await axios.delete(`https://quiz-application-with-admin-f-1.onrender.com/api/tests/${testId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success('Test deleted successfully!', { position: 'top-center', autoClose: 2000 });

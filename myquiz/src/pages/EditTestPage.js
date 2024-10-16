@@ -22,7 +22,7 @@ const EditPage = () => {
       }
 
       try {
-        const response = await axios.get('http://localhost:3000/api/auth/me', {
+        const response = await axios.get('https://quiz-application-with-admin-f-1.onrender.com/api/auth/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const userData = response.data;
@@ -47,7 +47,7 @@ const EditPage = () => {
       }
 
       try {
-        const response = await axios.get(`http://localhost:3000/api/tests/${id}`, {
+        const response = await axios.get(`https://quiz-application-with-admin-f-1.onrender.com/api/tests/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const testData = response.data;
@@ -130,7 +130,7 @@ const EditPage = () => {
     };
 
     try {
-      await axios.put(`http://localhost:3000/api/tests/${id}`, testData, {
+      await axios.put(`https://quiz-application-with-admin-f-1.onrender.com/api/tests/${id}`, testData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success('Test updated successfully!', { position: 'top-center', autoClose: 2000 });

@@ -15,7 +15,7 @@ const UserPage = () => {
           return;
         }
 
-        const response = await axios.get('http://localhost:3000/api/auth/me', {
+        const response = await axios.get('https://quiz-application-with-admin-f-1.onrender.com/api/auth/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
 
