@@ -127,7 +127,7 @@ const TestPage = () => {
     try {
       const imageSrc = webcamRef.current.getScreenshot();
 
-      const response = await axios.post(`http://localhost:3000/api/tests/submit`, { testId: id, answers, imageSrc }, {
+      const response = await axios.post(`https://quiz-application-with-admin-f-1.onrender.com/api/tests/submit`, { testId: id, answers, imageSrc }, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
